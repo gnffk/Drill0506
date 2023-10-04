@@ -49,6 +49,8 @@ def set_name_target_arrow():
     global action
     global frame
     global target_exists
+
+
     if points:
         sx, sy = cx, cy
         # hx,hy = TUK_WIDTH-50,TUK_HEIGHT-50
@@ -88,6 +90,9 @@ def update_world():
             cx,xy = hx,hy
             del points[0]
             set_name_target_arrow()
+
+    elif points:
+        set_name_target_arrow()
 
 open_canvas(TUK_WIDTH, TUK_HEIGHT)
 hide_cursor()
